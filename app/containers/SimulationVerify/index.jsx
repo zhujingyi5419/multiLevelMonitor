@@ -1,5 +1,5 @@
-import React from 'react'
-import PureRenderMixin from 'react-addons-pure-render-mixin'
+import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 
 class SimulationVerify extends React.Component {
@@ -12,7 +12,7 @@ class SimulationVerify extends React.Component {
             <div>
                 仿真验证
             </div>
-        )
+        );
     }
 
 }

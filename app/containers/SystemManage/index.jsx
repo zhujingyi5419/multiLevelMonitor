@@ -12,7 +12,7 @@ class SystemManage extends React.Component {
             <div>
                 系统管理
             </div>
-        )
+        );
     }
 
 }

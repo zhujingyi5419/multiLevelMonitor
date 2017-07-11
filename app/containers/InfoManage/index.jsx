@@ -1,5 +1,5 @@
-import React from 'react'
-import PureRenderMixin from 'react-addons-pure-render-mixin'
+import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 
 class InfoManage extends React.Component {
@@ -12,7 +12,7 @@ class InfoManage extends React.Component {
             <div>
                 信息管理
             </div>
-        )
+        );
     }
 
 }
