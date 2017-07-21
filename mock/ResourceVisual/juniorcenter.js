@@ -1,0 +1,58 @@
+/**
+ * Created by kingwubin on 2017/7/19.
+ */
+module.exports={
+    currentCenterName:'一级中心',
+    juniorCenterList:
+    [
+        {
+            centerName:'二级中心1',
+            centerInfo:{
+                CPUNum:60,
+                CPUUser:60,
+                serverNum:60,
+                diskUser:{
+                  id:'diskUser1',
+                  data:60
+                },
+                memory:{
+                  id:'memory1',
+                  data:60
+                }
+            }
+        },
+        {
+            centerName:'二级中心2',
+            centerInfo:{
+                CPUNum:60,
+                CPUUser:60,
+                serverNum:60,
+                diskUser:{
+                  id:'diskUser2',
+                  data:60
+                },
+                memory:{
+                  id:'memory2',
+                  data:60
+                }
+            }
+        },
+        {
+            centerName:'二级中心3',
+            centerInfo:{
+                CPUNum:60,
+                CPUUser:60,
+                serverNum:60,
+                diskUser:{
+                  id:'diskUser3',
+                  data:60
+                },
+                memory:{
+                  id:'memory3',
+                  data:60
+                }
+            }
+        }
+    ]
+
+}

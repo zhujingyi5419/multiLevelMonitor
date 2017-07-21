@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
             <div>
-                <div>
+                {/*<div>
                     <Link to="/VirtualRoom"><Button type="primary">虚拟机房</Button></Link>
                     <Link to="/"><Button type="primary">关系态势可视化</Button></Link>
                     <Link to="/ResourceCollect"><Button type="primary">资源采集</Button></Link>
@@ -22,7 +22,7 @@ class App extends React.Component {
                     <Link to="/ResourceVisual"><Button type="primary">资源可视化</Button></Link>
                     <Link to="/ResourceDispose"><Button type="primary">资源处理</Button></Link>
                     <Link to="/UnusualAlert"><Button type="primary">异常报警</Button></Link>
-                </div>
+                </div>*/}
                 {this.props.children}
             </div>
     );

@@ -47,6 +47,7 @@
   "dependencies": {
     "antd": "^2.11.2",
     "cesium": "^1.34.0",
+    "echarts-liquidfill": "^1.0.5",
     "ejs": "^2.5.6",
     "es6-promise": "^3.2.1",
     "immutable": "^3.8.1",
@@ -54,7 +55,7 @@
     "react-addons-css-transition-group": "^15.3.1",
     "react-addons-pure-render-mixin": "^15.3.1",
     "react-dom": "^15.3.1",
-    "react-redux": "^4.4.5",
+    "react-redux": "^4.4.8",
     "react-router": "^2.7.0",
     "react-swipe": "^5.0.5",
     "react-three": "^0.9.7",

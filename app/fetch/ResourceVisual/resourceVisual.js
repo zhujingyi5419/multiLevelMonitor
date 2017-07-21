@@ -7,3 +7,13 @@ export function getTreeData() {
     const result = get('http://localhost:8888/ResourceVisual/treeData');
     return result
 }
+
+export function getDashboard() {
+    const result = get('http://localhost:8888/ResourceVisual/dashboard');
+    return result
+}
+
+export function getJuniorCenter() {
+    const result = get('http://localhost:8888/ResourceVisual/juniorCenter');
+    return result
+}
