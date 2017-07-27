@@ -6,20 +6,18 @@ import 'echarts/lib/component/title';
 export default class EchartsGauge extends React.Component {
     constructor(props) {
         super(props);
-        this.setGaugeOption = this.setGaugeOption.bind(this);
-        this.initGauge = this.initGauge.bind(this)
-    }
-    initGauge() {
-            const data = this.props.data;
-            let myChart = echarts.init(document.getElementById(data.id));
-            let options = this.setGaugeOption(data.data);
-            myChart.setOption(options)
     }
     componentDidMount() {
-        this.initGauge()
+        const data = this.props.data;
+        this.myChart = echarts.init(document.getElementById(data.id));
+        let options = this.setGaugeOption(data.data);
+        this.myChart.setOption(options)
     }
     componentDidUpdate() {
-        this.initGauge()
+        if(this.myChart) {
+            let options = this.setGaugeOption(this.props.data.data);
+            this.myChart.setOption(options)
+        }
     }
     render() {
         const id = this.props.data.id;

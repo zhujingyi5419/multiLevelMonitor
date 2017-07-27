@@ -9,20 +9,18 @@ import 'echarts/lib/component/title';
 export default class EchartsLine extends React.Component {
     constructor(props) {
         super(props);
-        this.setLineOption = this.setLineOption.bind(this);
-        this.initLine = this.initLine.bind(this)
     }
-    initLine() {
-            const data = this.props.data;
-            let myChart = echarts.init(document.getElementById(data.id));
-            let options = this.setLineOption(this.props.data);
-            myChart.setOption(options)
-        }
     componentDidMount() {
-        this.initLine()
+        const data = this.props.data;
+        this.myChart = echarts.init(document.getElementById(data.id));
+        let options = this.setLineOption(this.props.data);
+        this.myChart.setOption(options)
     }
     componentDidUpdate() {
-        this.initLine()
+        if(this.myChart){
+            let options = this.setLineOption(this.props.data);
+            this.myChart.setOption(options)
+        }
     }
     render() {
         const id = this.props.data.id;

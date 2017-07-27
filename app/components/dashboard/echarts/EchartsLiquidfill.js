@@ -14,22 +14,20 @@ import 'echarts-liquidfill/dist/echarts-liquidfill.min';
 export default class EchartsLiquidfill extends React.Component {
     constructor(props) {
         super(props);
-        this.setLiquidfillOption = this.setLiquidfillOption.bind(this);
-        this.initLiquidfill = this.initLiquidfill.bind(this)
-    }
-    initLiquidfill() {
-        const data=this.props.data;
-        let myChart = echarts.init(document.getElementById(data.id));
-        let options = this.setLiquidfillOption(this.props.data);
-        myChart.setOption(options)
     }
 
     componentDidMount() {
-        this.initLiquidfill()
+        const data=this.props.data;
+        this.myChart = echarts.init(document.getElementById(data.id));
+        let options = this.setLiquidfillOption(this.props.data);
+        this.myChart.setOption(options)
     }
 
     componentDidUpdate() {
-        this.initLiquidfill()
+        if(this.myChart){
+        let options = this.setLiquidfillOption(this.props.data);
+        this.myChart.setOption(options)
+        }
     }
 
     render() {

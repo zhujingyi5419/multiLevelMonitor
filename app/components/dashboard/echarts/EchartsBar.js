@@ -10,22 +10,20 @@ import 'echarts/lib/component/title';
 export default class EchartsBar extends React.Component {
     constructor(props) {
         super(props);
-        this.setBarOption = this.setBarOption.bind(this);
-        this.initBar = this.initBar.bind(this)
     }
-    initBar() {
-            const data = this.props.data;
-            let myChart = echarts.init(document.getElementById(data.id));
-            let options = this.setBarOption(this.props.data);
-            myChart.setOption(options)
-        }
 
     componentDidMount() {
-        this.initBar()
+        const data = this.props.data;
+        this.myChart = echarts.init(document.getElementById(data.id));
+        let options = this.setBarOption(this.props.data);
+        this.myChart.setOption(options)
     }
 
     componentDidUpdate() {
-        this.initBar()
+        if(this.myChart){
+        let options = this.setBarOption(this.props.data);
+        this.myChart.setOption(options)
+        }
     }
 
     render() {
